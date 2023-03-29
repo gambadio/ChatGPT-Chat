@@ -1,0 +1,81 @@
+@keyframes gradient {
+    0% {
+      background-position: 0% 50%;
+    }
+    50% {
+      background-position: 100% 50%;
+    }
+    100% {
+      background-position: 0% 50%;
+    }
+  }
+  
+  body {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+    background: linear-gradient(135deg, #6B2DA9, #E2336E, #32A89B);
+    background-size: 300% 300%;
+    animation: gradient 30s ease infinite;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+  }
+  
+  .chat-container {
+    width: 400px;
+    border: 1px solid #ccc;
+    background-color: #fff;
+    border-radius: 5px;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .chat-messages {
+    flex: 1;
+    padding: 20px;
+    overflow-y: auto;
+  }
+  
+  .user-message,
+  .gpt-message {
+    margin-bottom: 10px;
+    padding: 10px;
+    border-radius: 5px;
+    max-width: 80%;
+    word-wrap: break-word;
+  }
+  
+  .user-message {
+    align-self: flex-end;
+    background-color: #6B2DA9;
+    color: #fff;
+  }
+  
+  .gpt-message {
+    align-self: flex-start;
+    background-color: #E2336E;
+    color: #fff;
+  }
+  
+  .input-container {
+    border-top: 1px solid #ccc;
+    display: flex;
+  }
+  
+  input {
+    flex: 1;
+    border: none;
+    padding: 10px;
+    outline: none;
+  }
+  
+  button {
+    border: none;
+    background-color: #32A89B;
+    color: #fff;
+    padding: 10px;
+    cursor: pointer;
+  }
