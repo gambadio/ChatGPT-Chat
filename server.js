@@ -5,7 +5,9 @@ const path = require('path');
 
 const app = express(); app.use(bodyParser.json()); app.use(express.static(path.join(__dirname, 'public')));
 
-const OPENAI_API_KEY = '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'; const configuration = new Configuration({ apiKey: OPENAI_API_KEY }); const openai = new OpenAIApi(configuration);
+const OPENAI_API_KEY = ''; //add API
+
+const configuration = new Configuration({ apiKey: OPENAI_API_KEY }); const openai = new OpenAIApi(configuration);
 
 app.get('/', (req, res) => { res.sendFile(path.join(__dirname, 'index.html')); });
 
